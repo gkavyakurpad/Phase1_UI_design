@@ -1,0 +1,32 @@
+<header class="modal-header">
+  <h4 class="modal-title">{{meeting? 'Edit Meeting': 'Add Meeting'}}</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+</header>
+
+<form [formGroup]="meetingForm" (ngSubmit)="saveMeeting()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" formControlName="title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="agenda">Agenda</label>
+    <textarea class="form-control" id="agenda" formControlName="agenda" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="scheduled_time">Scheduled Time</label>
+    <input type="datetime-local" class="form-control" id="scheduled_time" formControlName="scheduled_time" required>
+  </div>
+
+  <div class="form-group">
+    <label for="clients">Clients</label>
+    <select class="form-select" aria-label="Default select example" formControlName="clients" multiple id="clients">
+      <option [value]="client.client_id" *ngFor="let client of clientList">{{client.name}}</option>
+    </select>
+
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+</form>

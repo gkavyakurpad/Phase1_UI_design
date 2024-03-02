@@ -1,0 +1,27 @@
+<header class="header">
+    <h1>Available Clients</h1>
+    <button class="btn btn-primary" (click)="open()">Add Client</button>
+</header>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th class="action">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{ client.name }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.phone }}</td>
+            <td>{{ client.address }}</td>
+            <td class="action">
+                <button class="btn btn-success" (click)="open(client)">Edit</button>
+                <button class="btn btn-danger delete" (click)="delete(client)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

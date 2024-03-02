@@ -1,0 +1,32 @@
+<header class="header">
+  <h1>Available Projects</h1>
+  <button class="btn btn-primary" (click)="open()">Add Project</button>
+</header>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Client Name</th>
+      <th>Status</th>
+      <th class="action">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let project of projects">
+      <td>{{ project.name }}</td>
+      <td>{{ project.description }}</td>
+      <td>{{ project.start_date }}</td>
+      <td>{{ project.end_date }}</td>
+      <td>{{ project.client_name }}</td>
+      <td>{{ project.status }}</td>
+      <td class="action">
+        <!-- Add your action buttons here -->
+        <button class="btn btn-success" (click)="open(project)">Edit</button>
+        <button class="btn btn-danger delete" (click)="delete(project)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

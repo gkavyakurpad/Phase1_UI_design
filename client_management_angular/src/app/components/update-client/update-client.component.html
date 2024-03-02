@@ -1,0 +1,29 @@
+<header class="modal-header">
+  <h4 class="modal-title">{{client? 'Edit Client':'Add Client'}}</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+</header>
+<form [formGroup]="clientForm" (submit)="save()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" class="form-control" id="phone" formControlName="phone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <textarea class="form-control" id="address" formControlName="address" required></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" [disabled]="!clientForm.valid">Submit</button>
+  </div>
+  
+</form>

@@ -1,0 +1,25 @@
+.header {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    padding: 0 24px;
+}
+
+table {
+    margin-top: 12px;
+}
+
+.action {
+    width: 12vw;
+}
+
+.action button {
+    width: 70px;
+}
+
+.delete {
+    margin-left: 12px;
+}
