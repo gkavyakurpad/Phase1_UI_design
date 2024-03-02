@@ -43,6 +43,40 @@ This project establishes a robust and well-structured REST API for a client mana
 - #### /projects/:projectId
     Type(DELETE) : delete project
 
+# ClientManagement
+
+This project is an Angular application (version 17.0.4) designed for managing clients, meetings, and projects. It allows users to:
+
+- Create new clients, meetings, and projects
+- Update existing clients, meetings, and projects
+- Delete clients, meetings, and projects
+- This application also demonstrates the integration of Jest, a popular testing framework, with Angular, ensuring thorough application testing.
+
+## Development server
+
+- Run ng serve to start a development server.
+- Access the application in your web browser at http://localhost:4200/.
+- Any changes you make to the application's source code will be automatically reflected in the browser, streamlining the development process
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+- Run ng build to create a production-ready build of the application.
+- The built files will be placed in the dist/ directory.
+
+## Running unit tests
+
+- Run ng test to execute unit tests using Jest.
+- This ensures the functionality of individual application components.
+
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 
 ## License
 
