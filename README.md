@@ -1,13 +1,6 @@
 # CLIENT_MGMT_BACKEND
 This project establishes a robust and well-structured REST API for a client management application utilizing Node.js. It seamlessly integrates with MySQL for seamless data storage and retrieval, leveraging the efficient mysql2 library.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [License](#license)
-
 ## Installation
 
 1. Clone the repository.
